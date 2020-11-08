@@ -51,7 +51,7 @@
         <?php 
           if (isset($_SESSION['username'])) {
             $url1 = "profile.php";
-            $name1 = "Profile";
+            $name1 = $_SESSION['username'];
             $url2 = "logout.php";
             $name2 = "Logout";
           }
