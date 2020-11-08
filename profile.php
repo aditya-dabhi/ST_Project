@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Testing</title>
+        <title>Signup Page</title>
     </head>
     <body>
-        <h1>Testing</h1>
+        <h1>Profile</h1>
     </body>
 </html>
