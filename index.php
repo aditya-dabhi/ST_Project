@@ -18,13 +18,13 @@
     <div class="container mt-3">
       <div class="row">
         <div class = "col-4">
-          <img src="images/logo.jpg" height="120", width="300">
+          <a href="index.php"><img src="images/logo.jpg" height="120", width="300"></a>
         </div>
         <div class = "col">
           <div id="searchbox">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search" size="60">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><ion-icon name="search-outline" style="padding-top:3px"></ion-icon></button>
+            <form class="form-inline my-2 my-lg-0" action="items.php" method="post">
+              <input name="search-value" class="form-control" type="search" placeholder="Search" aria-label="Search" size="60">
+              <button name="search" class="btn btn-outline-success my-2 my-sm-0" type="submit"><ion-icon name="search-outline" style="padding-top:3px"></ion-icon></button>
             </form>
           </div>
         </div>
@@ -103,6 +103,130 @@
         </div>
       </div>
     </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>Fruits and Vegetables</h3>
+            </div>
+          </div>
+          <div class="row mt-3 border">
+            <div class="col-6 border-right">
+              <a href="items.php?category=Organic Store"><img src="images/fv1.png" width="540"></a>
+            </div>
+            <div class="col-3 border-right">
+              <div class="border-bottom pb-3"><a href="items.php?category=Fresh Fruits"><img src="images/fv2.png" width="260"></a></div>
+              <a href="items.php?category=Herbs and Seasoning"><img src="images/fv4.png" width="260"></a>
+            </div>
+            <div class="col-3" >
+              <div class="border-bottom pb-3"><a href="items.php?category=Fresh Vegetables"><img src="images/fv3.png" width="260"></a></div>
+              <a href="items.php?category=Exotic Fruits and Veggies"><img src="images/fv5.png" width="260"></a>
+            </div>
+          </div>
+    </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>Your Daily Staples</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Atta and Flour"><img src="images/ds1.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Rice and Rice Products"><img src="images/ds2.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Edible Oils and Ghee"><img src="images/ds3.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Salt, Sugar and Jaggery"><img src="images/ds4.png" width="250"></a></div>
+            </div>
+          </div>
+    </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>T20 Snack Store - up to 40% off</h3>
+            </div>
+          </div>
+          <div class="row mt-3 border">
+            <div class="col-6 border-right">
+              <a href="items.php?category=Snacks and Namkeens"><img src="images/t201.png" width="540"></a>
+            </div>
+            <div class="col-3 border-right">
+              <div class="border-bottom pb-3"><a href="items.php?category=Biscuits and Cookies"><img src="images/t202.png" width="260"></a></div>
+              <a href="items.php?category=Chocolates and Candies"><img src="images/t204.png" width="260"></a>
+            </div>
+            <div class="col-3" >
+              <div class="border-bottom pb-3"><a href="items.php?category=Frozen Veggies and Snacks"><img src="images/t203.png" width="260"></a></div>
+              <a href="items.php?category=Indian Mithai"><img src="images/t205.png" width="260"></a>
+            </div>
+          </div>
+    </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>Drinks & Beverages</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Tea"><img src="images/db1.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Coffee"><img src="images/db2.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Fruit Juices and Drinks"><img src="images/db3.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Health Drink, Supplement"><img src="images/db4.png" width="250"></a></div>
+            </div>
+          </div>
+    </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>Cleaning & Household</h3>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Detergents and Dishwash"><img src="images/ch1.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=All Purpose Cleaners"><img src="images/ch2.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=All Purpose Cleaners"><img src="images/ch3.png" width="250"></a></div>
+            </div>
+            <div class="col-3">
+              <div class="border"><a href="items.php?category=Fresheners and Repellents"><img src="images/ch4.png" width="250"></a></div>
+            </div>
+          </div>
+    </div>
+    <div class="container mt-5">
+          <div class="row">
+            <div class="col text-center border-bottom">
+              <h3>Beauty and Hygiene</h3>
+            </div>
+          </div>
+          <div class="row mt-3 border">
+            <div class="col-6 border-right">
+              <a href="items.php?category=Skin Care"><img src="images/bh1.png" width="540"></a>
+            </div>
+            <div class="col-3 border-right">
+              <div class="border-bottom pb-3"><a href="items.php?category=Makeup"><img src="images/bh2.png" width="260"></a></div>
+              <a href="items.php?category=Bath and Hand Wash"><img src="images/bh4.png" width="260"></a>
+            </div>
+            <div class="col-3" >
+              <div class="border-bottom pb-3"><a href="items.php?category=Fragrances and Deos"><img src="images/bh3.png" width="260"></a></div>
+              <a href="items.php?category=Feminine Hygiene"><img src="images/bh5.png" width="260"></a>
+            </div>
+          </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
