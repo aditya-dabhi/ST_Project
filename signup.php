@@ -4,7 +4,7 @@
     $db_password = '';
     $db_name = 'st_project';
     $conn = mysqli_connect($db_host,$db_username,$db_password,$db_name);
-    $errors = array('fname'=>'','lname'=>'','email'=>'','username'=>'','password'=>'','cpassword'=>'','phone'=>'');
+    $errors = array('fname'=>'','lname'=>'','email'=>'','username'=>'','password'=>'','cpassword'=>'','address'=>'','phone'=>'');
     if (isset($_POST['submit'])) {
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
@@ -12,6 +12,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $cpassword = $_POST['cpassword'];
+        $address = $_POST['address'];
         $phone = $_POST['phone'];
         $valid = true;
 
@@ -104,7 +105,7 @@
         {
             if($conn)
             {
-                $sql="INSERT INTO USERS VALUES('$username','$fname','$lname','$email','$phone','$password')";
+                $sql="INSERT INTO USERS VALUES('$username','$fname','$lname','$email','$phone','$password','$address')";
                 if(mysqli_query($conn,$sql))
                 {
                     header("location: login.php");
@@ -185,6 +186,10 @@
                             <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" style="<?php echo strlen($errors['cpassword'])?'border:1px solid #FF0000':'' ?>">
                             <div style="color:red"><?php echo $errors['cpassword'] ?></div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter your address" name="address"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="mobile-number">Mobile Number</label>

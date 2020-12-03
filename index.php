@@ -1,5 +1,10 @@
 <?php
   session_start();
+  $db_host = '127.0.0.1:3306';
+  $db_username = 'root';
+  $db_password = '';
+  $db_name = 'st_project';
+  $conn = mysqli_connect($db_host,$db_username,$db_password,$db_name);
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,7 +16,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet", href="index.css">
-    <title>Hello, world!</title>
+    <title>Online Grocery Ordering System</title>
   </head>
   <body>
 
@@ -29,7 +34,7 @@
           </div>
         </div>
         <div class = "col-2" id="my-cart">
-          <a class="btn btn-warning" href="#"><div class="text-center">My Cart</div> <ion-icon name="cart-outline" size="large"></ion-icon></a>
+          <a class="btn btn-warning" href="cart.php"><div class="text-center">My Cart</div> <ion-icon name="cart-outline" size="large"></ion-icon></a>
         </div>
       </div>
     </div>
@@ -41,16 +46,22 @@
               SHOP BY CATEGORY
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <?php
+                if($conn){
+                  $sql = "SELECT DISTINCT main FROM category";
+                  $result = mysqli_query($conn,$sql);
+                  while($row = mysqli_fetch_assoc($result)) { ?>
+                    <a class="dropdown-item" href="items.php?category=<?php echo $row['main']; ?>"><?php echo $row['main']; ?></a>
+                  <?php }
+                }
+              ?>
             </div>
           </div>
         </div>
         <div class="col text-right">
         <?php 
           if (isset($_SESSION['username'])) {
-            $url1 = "profile.php";
+            $url1 = "#";
             $name1 = $_SESSION['username'];
             $url2 = "logout.php";
             $name2 = "Logout";
@@ -226,7 +237,12 @@
             </div>
           </div>
     </div>
-
+    <div class="jumbotron jumbotron-fluid mt-5">
+      <div class="container">
+        <h1 class="display-4">Software Tools - III Project</h1>
+        <p class="lead">Made by :<br>U18CO003 - Aditya Dabhi<br>U18CO004 - Kashyap Soni</p>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

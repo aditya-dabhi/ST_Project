@@ -17,6 +17,11 @@
                 if(strcmp($users[0]['password'],$password)==0) {
                     $_SESSION['username'] = $users[0]['username'];
                     $_SESSION['password'] = $users[0]['password'];
+                    $cart_products = array(
+                        'username'=>$users[0]['username'],
+                        'products'=>array()
+                    );
+                    setcookie('cartproducts', json_encode($cart_products), time()+86400, "/");
                     header("location: index.php");
                 }
                 else{
